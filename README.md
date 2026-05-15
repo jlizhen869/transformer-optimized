@@ -38,24 +38,18 @@ gen = model.generate(src)    # [2, <=50]
 
 `src_mask` and `tgt_mask` should be shaped `[B, 1, 1, seq_len]`, with 1 = attend, 0 = ignore.
 
-## Run smoke test
-
-```bash
-python smoke_test.py
-```
-
 ## KV cache speedup
 
-Measured on CPU, `d_model=128`, `max_len=30`, batch size 1: | | avg latency |
+Measured on CPU, `d_model=128`, `max_len=30`, batch size 1:
+
+| | avg latency |
 |---|---|
 | with KV cache | 12.9ms |
 | without KV cache | 25.8ms |
 | speedup | 2.00x |
 
-## KV cache speedup
+## Run smoke test
 
-Measured on CPU, `d_model=128`, `max_len=30`, batch size 1: | | avg latency |
-| :--- | :--- |
-| with KV cache | 12.9ms |
-| without KV cache | 25.8ms |
-| **speedup** | **2.00x** |
+```bash
+python smoke_test.py
+```
