@@ -51,3 +51,11 @@ Measured on CPU, `d_model=128`, `max_len=30`, batch size 1: | | avg latency |
 | with KV cache | 12.9ms |
 | without KV cache | 25.8ms |
 | speedup | 2.00x |
+
+## KV cache speedup
+
+Measured on CPU, `d_model=128`, `max_len=30`, batch size 1: | | avg latency |
+| :--- | :--- |
+| with KV cache | 12.9ms |
+| without KV cache | 25.8ms |
+| **speedup** | **2.00x** |
